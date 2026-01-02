@@ -247,7 +247,13 @@ export function CreateStatisticsPage() {
     return stats;
   };
 
-  const handleCreateReport = async () => {
+  const handleCreateReport = async (e?: React.MouseEvent<HTMLButtonElement>) => {
+    // Empêcher le rechargement de la page
+    if (e) {
+      e.preventDefault();
+      e.stopPropagation();
+    }
+
     if (!reportTitle.trim()) {
       setError('Veuillez entrer un titre pour le rapport');
       return;
