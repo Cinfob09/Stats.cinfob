@@ -1,6 +1,5 @@
 // src/components/Dashboard/CreateStatisticsPage.tsx
-import { useState, useEffect } from 'react';
-import {
+import React, { useState, useEffect } from 'react';import {
   Plus,
   TrendingUp,
   Users,
